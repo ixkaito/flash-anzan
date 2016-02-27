@@ -19,6 +19,10 @@ button {
 	cursor: pointer;
 }
 
+button:active {
+	box-shadow: 0 0 20px rgba(0,0,0,0.2) inset;
+}
+
 .start {
 	background: #4fc1e9;
 	border-color: #3bafda;

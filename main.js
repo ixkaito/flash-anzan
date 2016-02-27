@@ -1,10 +1,11 @@
-var max = 10;
+var size = 10;
 var question = document.getElementById('js-question');
 var solution = document.getElementById('js-solution');
 var answer, i, timer, rand;
 solution.value = '';
 
 function start() {
+  clearTimeout(timer);
   answer = 0;
   i = 0;
   solution.value = '';
@@ -13,7 +14,7 @@ function start() {
 
 function flash() {
   rand = Math.floor((Math.random() * 99) + 1);
-  if (i < max) {
+  if (i < size) {
     timer = setTimeout(function() {
       question.innerHTML = rand;
       answer += rand;
@@ -32,7 +33,7 @@ function verify() {
   if (solution.value == answer) {
     alert('正解！');
   } else if (answer) {
-    alert('残念！不正解...');
+    alert('残念、不正解...');
   }
 }
 
