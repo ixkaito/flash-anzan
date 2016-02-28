@@ -1,25 +1,16 @@
 var size = 10;
-var question = document.getElementById('js-question');
-var solution = document.getElementById('js-solution');
+var display = document.getElementById('js-display');
 var answer, i, timer, rand;
-solution.value = '';
-
-function start() {
-  clearTimeout(timer);
-  answer = 0;
-  i = 0;
-  solution.value = '';
-  flash();
-}
+display.value = '';
 
 function flash() {
   rand = Math.floor((Math.random() * 99) + 1);
   if (i < size) {
     timer = setTimeout(function() {
-      question.innerHTML = rand;
+      display.value = rand;
       answer += rand;
       setTimeout(function() {
-        question.innerHTML = '';
+        display.value = '';
       }, 700);
       flash();
     }, 1000);
@@ -29,8 +20,16 @@ function flash() {
   }
 }
 
-function verify() {
-  if (solution.value == answer) {
+function start() {
+  clearTimeout(timer);
+  display.value = '';
+  answer = 0;
+  i = 0;
+  flash();
+}
+
+function submit() {
+  if (display.value == answer) {
     alert('正解！');
   } else if (answer) {
     alert('残念、不正解...');

@@ -35,22 +35,8 @@ button:active {
 	color: #fff;
 }
 
-.start {
-	margin-bottom: 50px;
-}
-
-.question {
+.display {
 	background: #f8f8f8;
-	width: 400px;
-	height: 80px;
-	border-radius: 6px;
-	margin: auto;
-	margin-top: 100px;
-	font-size: 48px;
-	line-height: 80px;
-}
-
-.solution {
 	width: 400px;
 	height: 80px;
 	line-height: 80px;

@@ -7,11 +7,12 @@
 </head>
 <body>
 	<h1>フラッシュ暗算</h1>
-	<p id="js-question" class="question js-question"></p>
-	<p><button class="start" onclick="start();">スタート</button></p>
-	<p><input id="js-solution" class="solution" type="text" /></p>
-	<p><button class="submit" onclick="verify();">答える</button></p>
-	<p><button onclick="showanswer();">答えを見る</button></p>
+	<p><input id="js-display" class="display" type="text" /></p>
+	<p>
+		<button class="start" onclick="start();">スタート</button>
+		<button class="submit" onclick="submit();">回答</button>
+		<button onclick="showanswer();">正解表示</button>
+	</p>
 	<script src="./main.js" type="text/javascript"></script>
 </body>
 </html>
